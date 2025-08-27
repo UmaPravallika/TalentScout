@@ -11,7 +11,14 @@ A local, privacy-conscious hiring assistant that:
 ## Setup
 
 ### 1) Install Ollama (local)
-```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ollama serve
 ollama pull llama3.1
+
+### 2) Install Python deps
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+### 3) Run
+streamlit run app.py
